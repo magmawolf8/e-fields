@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-fields Interactive</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .iframe-container {
+            width: 1440px;
+            height: 900px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-3">
+    <ul class="nav nav-tabs justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#rectangle">Rectangle Electrode</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#paperclip">Paperclip Electrode</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#circle">Circle Electrode</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane container active" id="rectangle">
+            <div class="iframe-container">
+                <iframe src="rectangle.csv.html"></iframe>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="paperclip">
+            <div class="iframe-container">
+                <iframe src="paperclip.csv.html"></iframe>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="circle">
+            <div class="iframe-container">
+                <iframe src="circle.csv.html"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
