@@ -1,35 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>E-fields interactive</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .big-text {
-            font-size: 24px;
-            color: #4a4a4a;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        iframe {
-            border: 2px solid #ddd;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="big-text">Rectangle Electrode</div>
-    <iframe src="rectangle.csv.html" width="1440" height="900"></iframe>
-    
-    <div class="big-text">Paperclip Electrode</div>
-    <iframe src="paperclip.csv.html" width="1440" height="900"></iframe>
-    
-    <div class="big-text">Circle Electrode</div>
-    <iframe src="circle.csv.html" width="1440" height="900"></iframe>
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="big-text">Rectangle Electrode</div>
+      <iframe src="rectangle.csv.html" width="1440" height="900"></iframe>
+    </div>
+    <div class="carousel-item">
+      <div class="big-text">Paperclip Electrode</div>
+      <iframe src="paperclip.csv.html" width="1440" height="900"></iframe>
+    </div>
+    <div class="carousel-item">
+      <div class="big-text">Circle Electrode</div>
+      <iframe src="circle.csv.html" width="1440" height="900"></iframe>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>
