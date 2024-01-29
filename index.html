@@ -8,18 +8,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         .iframe-container {
-            width: 1440px;
-            height: 900px;
-            overflow: hidden;
             position: relative;
-            margin: auto;
-            text-align: center; /* Center content */
+            overflow: hidden;
+            padding-top: 62.5%; /* 900 / 1440 = 0.625 */
         }
         .iframe-container iframe {
-            width: 1440px;
-            height: 900px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             border: none;
-            margin: auto; /* Additional centering for iframe */
         }
     </style>
 </head>
