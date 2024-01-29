@@ -7,55 +7,62 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
-        .tab-pane {
-            width: 1440px; /* Set your desired width */
-            height: 900px; /* Set your desired height */
-            /* Add more styling as needed */
-        }
         .iframe-container {
-            position: relative;
-            overflow: hidden;
-            padding-top: 62.5%; /* 900 / 1440 = 0.625 */
+            text-align: center; /* Center content */
+            width: 1440px; /* Adjust width as needed */
+            height: 900px; /* Adjust height as needed */
+            margin: auto; /* Center iframe container */
         }
         .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
             border: none;
+        }
+        .nav-tabs .nav-link {
+            border-radius: 0; /* Makes the tabs square */
+        }
+        .tab-content {
+            border-left: 1px solid #ddd; /* Border between tabs and content */
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
 
 <div class="container-fluid mt-3">
-    <ul class="nav nav-tabs justify-content-center">
-        <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#rectangle">Rectangle Electrode</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#paperclip">Paperclip Electrode</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#circle">Circle Electrode</a>
-        </li>
-    </ul>
-
-    <div class="tab-content">
-        <div class="tab-pane container active" id="rectangle">
-            <div class="iframe-container">
-                <iframe src="rectangle.csv.html"></iframe>
-            </div>
+    <div class="row">
+        <!-- Vertical Tabs -->
+        <div class="col-md-3">
+            <ul class="nav nav-tabs flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#rectangle">Rectangle Electrode</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#paperclip">Paperclip Electrode</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#circle">Circle Electrode</a>
+                </li>
+            </ul>
         </div>
-        <div class="tab-pane container fade" id="paperclip">
-            <div class="iframe-container">
-                <iframe src="paperclip.csv.html"></iframe>
-            </div>
-        </div>
-        <div class="tab-pane container fade" id="circle">
-            <div class="iframe-container">
-                <iframe src="circle.csv.html"></iframe>
+        <!-- Tab Content -->
+        <div class="col-md-9">
+            <div class="tab-content">
+                <div class="tab-pane active" id="rectangle">
+                    <div class="iframe-container">
+                        <iframe src="rectangle.csv.html"></iframe>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="paperclip">
+                    <div class="iframe-container">
+                        <iframe src="paperclip.csv.html"></iframe>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="circle">
+                    <div class="iframe-container">
+                        <iframe src="circle.csv.html"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
