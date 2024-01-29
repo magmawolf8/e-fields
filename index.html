@@ -3,35 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-fields interactive</title>
+    <title>E-fields Interactive</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .iframe-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="big-text">Rectangle Electrode</div>
-      <iframe src="rectangle.csv.html" width="1440" height="900"></iframe>
+<div class="container mt-3">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#rectangle">Rectangle Electrode</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#paperclip">Paperclip Electrode</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#circle">Circle Electrode</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane container active" id="rectangle">
+            <div class="iframe-container">
+                <iframe src="rectangle.csv.html"></iframe>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="paperclip">
+            <div class="iframe-container">
+                <iframe src="paperclip.csv.html"></iframe>
+            </div>
+        </div>
+        <div class="tab-pane container fade" id="circle">
+            <div class="iframe-container">
+                <iframe src="circle.csv.html"></iframe>
+            </div>
+        </div>
     </div>
-    <div class="carousel-item">
-      <div class="big-text">Paperclip Electrode</div>
-      <iframe src="paperclip.csv.html" width="1440" height="900"></iframe>
-    </div>
-    <div class="carousel-item">
-      <div class="big-text">Circle Electrode</div>
-      <iframe src="circle.csv.html" width="1440" height="900"></iframe>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
 
 <!-- Bootstrap JS, Popper.js, and jQuery -->
