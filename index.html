@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+    <title>E-fields interactive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .big-text {
+            font-size: 24px;
+            color: #4a4a4a;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        iframe {
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-<big>Rectangle electrode</big>
-<iframe src="rectangle.csv.html" width="1440" height="900"></iframe>
-<big>Paperclip electrode</big>
-<iframe src="paperclip.csv.html" width="1440" height="900"></iframe>
-<big>Circle electrode</big>
-<iframe src="circle.csv.html" width="1440" height="900"></iframe>
-
+    <div class="big-text">Rectangle Electrode</div>
+    <iframe src="rectangle.csv.html" width="1440" height="900"></iframe>
+    
+    <div class="big-text">Paperclip Electrode</div>
+    <iframe src="paperclip.csv.html" width="1440" height="900"></iframe>
+    
+    <div class="big-text">Circle Electrode</div>
+    <iframe src="circle.csv.html" width="1440" height="900"></iframe>
 </body>
 </html>
