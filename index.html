@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         .iframe-container {
-            width: 1440px;
-            height: 900px;
-            overflow: hidden;
             position: relative;
-            margin: auto;
+            overflow: hidden;
+            padding-top: 62.5%; /* 900 / 1440 = 0.625 */
         }
         .iframe-container iframe {
             position: absolute;
@@ -22,14 +20,11 @@
             height: 100%;
             border: none;
         }
-        .custom-container {
-            min-width: 1440px;  /* Minimum width to accommodate the iframe */
-        }
     </style>
 </head>
 <body>
 
-<div class="container mt-3 custom-container">
+<div class="container mt-3">
     <ul class="nav nav-tabs justify-content-center">
         <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#rectangle">Rectangle Electrode</a>
